@@ -48,6 +48,10 @@ interface ContainerProps {
   cancelDialogContent: React.ReactNode
   workspaceAddedNewDestinations?: boolean
   defaultDestinationBehavior?: DefaultDestinationBehavior
+  allowAll?: boolean
+  denyAll?: boolean
+  disableChooseNo?: boolean
+  showConsent?: boolean
 }
 
 function normalizeDestinations(destinations: Destination[]) {
@@ -109,6 +113,24 @@ const Container: React.FC<ContainerProps> = props => {
   }
 
   const showDialog = () => toggleDialog(true)
+
+  React.useEffect(() => {
+    if (props.allowAll) {
+      for (const [key] of Object.entries(props.preferences)) {
+        props.setPreferences({ [key]: true })
+      }
+      props.saveConsent()
+    }
+  }, [props.allowAll])
+
+  React.useEffect(() => {
+    if (props.denyAll) {
+      for (const [key] of Object.entries(props.preferences)) {
+        props.setPreferences({ [key]: false })
+      }
+      props.saveConsent()
+    }
+  }, [props.denyAll])
 
   React.useEffect(() => {
     emitter.on('openDialog', showDialog)
@@ -211,6 +233,7 @@ const Container: React.FC<ContainerProps> = props => {
           functional={props.preferences.functional}
           title={props.preferencesDialogTitle}
           content={props.preferencesDialogContent}
+          disableChooseNo={props.disableChooseNo}
         />
       )}
 
