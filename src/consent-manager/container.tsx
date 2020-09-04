@@ -39,7 +39,6 @@ interface ContainerProps {
   isConsentRequired: boolean
   implyConsentOnInteraction: boolean
   bannerContent: React.ReactNode
-  // bannerSubContent: React.ReactNode
   bannerTextColor: string
   bannerBackgroundColor: string
   preferencesDialogTitle: React.ReactNode
@@ -77,7 +76,6 @@ const Container: React.FC<ContainerProps> = props => {
   const [isDialogOpen, toggleDialog] = React.useState(
     false || (props.workspaceAddedNewDestinations && props.defaultDestinationBehavior === 'ask')
   )
-  // const [showBanner, toggleBanner] = React.useState(true)
   const showBanner = true
   const [isCancelling, toggleCancel] = React.useState(false)
 
@@ -150,32 +148,6 @@ const Container: React.FC<ContainerProps> = props => {
     }
   })
 
-  // const onClose = () => {
-  //   if (props.closeBehavior === undefined || props.closeBehavior === CloseBehavior.DISMISS) {
-  //     return toggleBanner(false)
-  //   }
-
-  //   if (props.closeBehavior === CloseBehavior.ACCEPT) {
-  //     return props.saveConsent()
-  //   }
-
-  //   if (props.closeBehavior === CloseBehavior.DENY) {
-  //     const falsePreferences = Object.keys(props.preferences).reduce((acc, category) => {
-  //       acc[category] = false
-  //       return acc
-  //     }, {})
-
-  //     props.setPreferences(falsePreferences)
-  //     return props.saveConsent()
-  //   }
-
-  //   // closeBehavior is a custom function
-  //   const customClosePreferences = props.closeBehavior(props.preferences)
-  //   props.setPreferences(customClosePreferences)
-  //   props.saveConsent()
-  //   return toggleBanner(false)
-  // }
-
   const handleCategoryChange = (category: string, value: boolean) => {
     props.setPreferences({
       [category]: value
@@ -219,10 +191,7 @@ const Container: React.FC<ContainerProps> = props => {
       {(showBannerContent || props.showConsentByChoice) && (
         <Banner
           innerRef={current => (banner = { current })}
-          // onClose={onClose}
-          // onChangePreferences={() => toggleDialog(true)}
           content={props.bannerContent}
-          // subContent={props.bannerSubContent}
           textColor={props.bannerTextColor}
           backgroundColor={props.bannerBackgroundColor}
         />

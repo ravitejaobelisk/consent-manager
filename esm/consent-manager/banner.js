@@ -48,19 +48,6 @@ var Root = styled('div')(
         ';\n  position: relative;\n  padding: 8px;\n  background: ',
         ';\n  color: ',
         ';\n  text-align: center;\n  font-size: 12px;\n  line-height: 1.3;\n'
-        // const Content = styled('div')`
-        //   a,
-        //   button {
-        //     display: inline;
-        //     padding: 0;
-        //     border: none;
-        //     background: none;
-        //     color: inherit;
-        //     font: inherit;
-        //     text-decoration: underline;
-        //     cursor: pointer;
-        //   }
-        // `
       ]
     )),
   fontStyles,
@@ -71,40 +58,11 @@ var Root = styled('div')(
     return props.textColor
   }
 )
-// const Content = styled('div')`
-//   a,
-//   button {
-//     display: inline;
-//     padding: 0;
-//     border: none;
-//     background: none;
-//     color: inherit;
-//     font: inherit;
-//     text-decoration: underline;
-//     cursor: pointer;
-//   }
-// `
 var P = styled('p')(
   templateObject_2 ||
     (templateObject_2 = __makeTemplateObject(
       ['\n  margin: 0;\n  &:not(:last-child) {\n    margin-bottom: 6px;\n  }\n'],
-      [
-        '\n  margin: 0;\n  &:not(:last-child) {\n    margin-bottom: 6px;\n  }\n'
-        // const CloseButton = styled('button')`
-        //   position: absolute;
-        //   right: 8px;
-        //   top: 50%;
-        //   transform: translateY(-50%);
-        //   padding: 8px;
-        //   border: none;
-        //   background: none;
-        //   color: inherit;
-        //   font: inherit;
-        //   font-size: 14px;
-        //   line-height: 1;
-        //   cursor: pointer;
-        // `
-      ]
+      ['\n  margin: 0;\n  &:not(:last-child) {\n    margin-bottom: 6px;\n  }\n']
     ))
 )
 var Banner = /** @class */ (function(_super) {
@@ -115,10 +73,7 @@ var Banner = /** @class */ (function(_super) {
   Banner.prototype.render = function() {
     var _a = this.props,
       innerRef = _a.innerRef,
-      // onClose,
-      // onChangePreferences,
       content = _a.content,
-      // subContent,
       backgroundColor = _a.backgroundColor,
       textColor = _a.textColor
     return React.createElement(
@@ -132,4 +87,4 @@ var Banner = /** @class */ (function(_super) {
 })(PureComponent)
 export default Banner
 var templateObject_1, templateObject_2
-//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiYmFubmVyLmpzIiwic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsiLi4vLi4vc3JjL2NvbnNlbnQtbWFuYWdlci9iYW5uZXIudHN4Il0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7Ozs7Ozs7Ozs7Ozs7Ozs7O0FBQUEsT0FBTyxLQUFLLEVBQUUsRUFBRSxhQUFhLEVBQUUsTUFBTSxPQUFPLENBQUE7QUFDNUMsT0FBTyxNQUFNLE1BQU0sZUFBZSxDQUFBO0FBQ2xDLE9BQU8sVUFBVSxNQUFNLGVBQWUsQ0FBQTtBQUV0QyxJQUFNLElBQUksR0FBRyxNQUFNLENBQXdELEtBQUssQ0FBQyw2TkFBQSxNQUM3RSxFQUFVLDJEQUdFLEVBQThCLGNBQ25DLEVBQXdCLHFFQUlsQztJQUVELGlDQUFpQztJQUNqQyxPQUFPO0lBQ1AsYUFBYTtJQUNiLHVCQUF1QjtJQUN2QixrQkFBa0I7SUFDbEIsb0JBQW9CO0lBQ3BCLHdCQUF3QjtJQUN4QixzQkFBc0I7SUFDdEIscUJBQXFCO0lBQ3JCLGtDQUFrQztJQUNsQyx1QkFBdUI7SUFDdkIsTUFBTTtJQUNOLElBQUk7S0F0QkEsVUFBVSxFQUdFLFVBQUEsS0FBSyxJQUFJLE9BQUEsS0FBSyxDQUFDLGVBQWUsRUFBckIsQ0FBcUIsRUFDbkMsVUFBQSxLQUFLLElBQUksT0FBQSxLQUFLLENBQUMsU0FBUyxFQUFmLENBQWUsQ0FJbEMsQ0FBQTtBQUVELGlDQUFpQztBQUNqQyxPQUFPO0FBQ1AsYUFBYTtBQUNiLHVCQUF1QjtBQUN2QixrQkFBa0I7QUFDbEIsb0JBQW9CO0FBQ3BCLHdCQUF3QjtBQUN4QixzQkFBc0I7QUFDdEIscUJBQXFCO0FBQ3JCLGtDQUFrQztBQUNsQyx1QkFBdUI7QUFDdkIsTUFBTTtBQUNOLElBQUk7QUFFSixJQUFNLENBQUMsR0FBRyxNQUFNLENBQUMsR0FBRyxDQUFDLDJJQUFBLHdFQUtwQjtJQUVELHdDQUF3QztJQUN4Qyx3QkFBd0I7SUFDeEIsZ0JBQWdCO0lBQ2hCLGNBQWM7SUFDZCxpQ0FBaUM7SUFDakMsa0JBQWtCO0lBQ2xCLGtCQUFrQjtJQUNsQixzQkFBc0I7SUFDdEIsb0JBQW9CO0lBQ3BCLG1CQUFtQjtJQUNuQixxQkFBcUI7SUFDckIsb0JBQW9CO0lBQ3BCLHFCQUFxQjtJQUNyQixJQUFJO0lBZkgsQ0FBQTtBQTJCRDtJQUFvQywwQkFBb0I7SUFBeEQ7O0lBK0JBLENBQUM7SUE1QkMsdUJBQU0sR0FBTjtRQUNRLElBQUEsZUFRUSxFQVBaLHNCQUFRO1FBQ1IsV0FBVztRQUNYLHVCQUF1QjtRQUN2QixvQkFBTztRQUNQLGNBQWM7UUFDZCxvQ0FBZSxFQUNmLHdCQUNZLENBQUE7UUFFZCxPQUFPLENBQ0wsb0JBQUMsSUFBSSxJQUFDLFFBQVEsRUFBRSxRQUFRLEVBQUUsZUFBZSxFQUFFLGVBQWUsRUFBRSxTQUFTLEVBQUUsU0FBUztZQUU5RSxvQkFBQyxDQUFDLFFBQUUsT0FBTyxDQUFLLENBV1gsQ0FDUixDQUFBO0lBQ0gsQ0FBQztJQTdCTSxrQkFBVyxHQUFHLFFBQVEsQ0FBQTtJQThCL0IsYUFBQztDQUFBLEFBL0JELENBQW9DLGFBQWEsR0ErQmhEO2VBL0JvQixNQUFNIn0=
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiYmFubmVyLmpzIiwic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsiLi4vLi4vc3JjL2NvbnNlbnQtbWFuYWdlci9iYW5uZXIudHN4Il0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7Ozs7Ozs7Ozs7Ozs7Ozs7O0FBQUEsT0FBTyxLQUFLLEVBQUUsRUFBRSxhQUFhLEVBQUUsTUFBTSxPQUFPLENBQUE7QUFDNUMsT0FBTyxNQUFNLE1BQU0sZUFBZSxDQUFBO0FBQ2xDLE9BQU8sVUFBVSxNQUFNLGVBQWUsQ0FBQTtBQUV0QyxJQUFNLElBQUksR0FBRyxNQUFNLENBQXdELEtBQUssQ0FBQyw2TkFBQSxNQUM3RSxFQUFVLDJEQUdFLEVBQThCLGNBQ25DLEVBQXdCLHFFQUlsQyxLQVJHLFVBQVUsRUFHRSxVQUFBLEtBQUssSUFBSSxPQUFBLEtBQUssQ0FBQyxlQUFlLEVBQXJCLENBQXFCLEVBQ25DLFVBQUEsS0FBSyxJQUFJLE9BQUEsS0FBSyxDQUFDLFNBQVMsRUFBZixDQUFlLENBSWxDLENBQUE7QUFFRCxJQUFNLENBQUMsR0FBRyxNQUFNLENBQUMsR0FBRyxDQUFDLDJJQUFBLHdFQUtwQixJQUFBLENBQUE7QUFTRDtJQUFvQywwQkFBb0I7SUFBeEQ7O0lBaUJBLENBQUM7SUFkQyx1QkFBTSxHQUFOO1FBQ1EsSUFBQSxlQUtRLEVBSlosc0JBQVEsRUFDUixvQkFBTyxFQUNQLG9DQUFlLEVBQ2Ysd0JBQ1ksQ0FBQTtRQUVkLE9BQU8sQ0FDTCxvQkFBQyxJQUFJLElBQUMsUUFBUSxFQUFFLFFBQVEsRUFBRSxlQUFlLEVBQUUsZUFBZSxFQUFFLFNBQVMsRUFBRSxTQUFTO1lBQzlFLG9CQUFDLENBQUMsUUFBRSxPQUFPLENBQUssQ0FDWCxDQUNSLENBQUE7SUFDSCxDQUFDO0lBZk0sa0JBQVcsR0FBRyxRQUFRLENBQUE7SUFnQi9CLGFBQUM7Q0FBQSxBQWpCRCxDQUFvQyxhQUFhLEdBaUJoRDtlQWpCb0IsTUFBTSJ9

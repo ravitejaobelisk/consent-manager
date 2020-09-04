@@ -64,19 +64,6 @@ var Root = react_emotion_1.default('div')(
         ';\n  position: relative;\n  padding: 8px;\n  background: ',
         ';\n  color: ',
         ';\n  text-align: center;\n  font-size: 12px;\n  line-height: 1.3;\n'
-        // const Content = styled('div')`
-        //   a,
-        //   button {
-        //     display: inline;
-        //     padding: 0;
-        //     border: none;
-        //     background: none;
-        //     color: inherit;
-        //     font: inherit;
-        //     text-decoration: underline;
-        //     cursor: pointer;
-        //   }
-        // `
       ]
     )),
   font_styles_1.default,
@@ -87,40 +74,11 @@ var Root = react_emotion_1.default('div')(
     return props.textColor
   }
 )
-// const Content = styled('div')`
-//   a,
-//   button {
-//     display: inline;
-//     padding: 0;
-//     border: none;
-//     background: none;
-//     color: inherit;
-//     font: inherit;
-//     text-decoration: underline;
-//     cursor: pointer;
-//   }
-// `
 var P = react_emotion_1.default('p')(
   templateObject_2 ||
     (templateObject_2 = __makeTemplateObject(
       ['\n  margin: 0;\n  &:not(:last-child) {\n    margin-bottom: 6px;\n  }\n'],
-      [
-        '\n  margin: 0;\n  &:not(:last-child) {\n    margin-bottom: 6px;\n  }\n'
-        // const CloseButton = styled('button')`
-        //   position: absolute;
-        //   right: 8px;
-        //   top: 50%;
-        //   transform: translateY(-50%);
-        //   padding: 8px;
-        //   border: none;
-        //   background: none;
-        //   color: inherit;
-        //   font: inherit;
-        //   font-size: 14px;
-        //   line-height: 1;
-        //   cursor: pointer;
-        // `
-      ]
+      ['\n  margin: 0;\n  &:not(:last-child) {\n    margin-bottom: 6px;\n  }\n']
     ))
 )
 var Banner = /** @class */ (function(_super) {
@@ -131,10 +89,7 @@ var Banner = /** @class */ (function(_super) {
   Banner.prototype.render = function() {
     var _a = this.props,
       innerRef = _a.innerRef,
-      // onClose,
-      // onChangePreferences,
       content = _a.content,
-      // subContent,
       backgroundColor = _a.backgroundColor,
       textColor = _a.textColor
     return react_1.default.createElement(
@@ -148,4 +103,4 @@ var Banner = /** @class */ (function(_super) {
 })(react_1.PureComponent)
 exports.default = Banner
 var templateObject_1, templateObject_2
-//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiYmFubmVyLmpzIiwic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsiLi4vLi4vc3JjL2NvbnNlbnQtbWFuYWdlci9iYW5uZXIudHN4Il0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7O0FBQUEsNkNBQTRDO0FBQzVDLGdFQUFrQztBQUNsQyw4REFBc0M7QUFFdEMsSUFBTSxJQUFJLEdBQUcsdUJBQU0sQ0FBd0QsS0FBSyxDQUFDLDZOQUFBLE1BQzdFLEVBQVUsMkRBR0UsRUFBOEIsY0FDbkMsRUFBd0IscUVBSWxDO0lBRUQsaUNBQWlDO0lBQ2pDLE9BQU87SUFDUCxhQUFhO0lBQ2IsdUJBQXVCO0lBQ3ZCLGtCQUFrQjtJQUNsQixvQkFBb0I7SUFDcEIsd0JBQXdCO0lBQ3hCLHNCQUFzQjtJQUN0QixxQkFBcUI7SUFDckIsa0NBQWtDO0lBQ2xDLHVCQUF1QjtJQUN2QixNQUFNO0lBQ04sSUFBSTtLQXRCQSxxQkFBVSxFQUdFLFVBQUEsS0FBSyxJQUFJLE9BQUEsS0FBSyxDQUFDLGVBQWUsRUFBckIsQ0FBcUIsRUFDbkMsVUFBQSxLQUFLLElBQUksT0FBQSxLQUFLLENBQUMsU0FBUyxFQUFmLENBQWUsQ0FJbEMsQ0FBQTtBQUVELGlDQUFpQztBQUNqQyxPQUFPO0FBQ1AsYUFBYTtBQUNiLHVCQUF1QjtBQUN2QixrQkFBa0I7QUFDbEIsb0JBQW9CO0FBQ3BCLHdCQUF3QjtBQUN4QixzQkFBc0I7QUFDdEIscUJBQXFCO0FBQ3JCLGtDQUFrQztBQUNsQyx1QkFBdUI7QUFDdkIsTUFBTTtBQUNOLElBQUk7QUFFSixJQUFNLENBQUMsR0FBRyx1QkFBTSxDQUFDLEdBQUcsQ0FBQywySUFBQSx3RUFLcEI7SUFFRCx3Q0FBd0M7SUFDeEMsd0JBQXdCO0lBQ3hCLGdCQUFnQjtJQUNoQixjQUFjO0lBQ2QsaUNBQWlDO0lBQ2pDLGtCQUFrQjtJQUNsQixrQkFBa0I7SUFDbEIsc0JBQXNCO0lBQ3RCLG9CQUFvQjtJQUNwQixtQkFBbUI7SUFDbkIscUJBQXFCO0lBQ3JCLG9CQUFvQjtJQUNwQixxQkFBcUI7SUFDckIsSUFBSTtJQWZILENBQUE7QUEyQkQ7SUFBb0MsMEJBQW9CO0lBQXhEOztJQStCQSxDQUFDO0lBNUJDLHVCQUFNLEdBQU47UUFDUSxJQUFBLGVBUVEsRUFQWixzQkFBUTtRQUNSLFdBQVc7UUFDWCx1QkFBdUI7UUFDdkIsb0JBQU87UUFDUCxjQUFjO1FBQ2Qsb0NBQWUsRUFDZix3QkFDWSxDQUFBO1FBRWQsT0FBTyxDQUNMLDhCQUFDLElBQUksSUFBQyxRQUFRLEVBQUUsUUFBUSxFQUFFLGVBQWUsRUFBRSxlQUFlLEVBQUUsU0FBUyxFQUFFLFNBQVM7WUFFOUUsOEJBQUMsQ0FBQyxRQUFFLE9BQU8sQ0FBSyxDQVdYLENBQ1IsQ0FBQTtJQUNILENBQUM7SUE3Qk0sa0JBQVcsR0FBRyxRQUFRLENBQUE7SUE4Qi9CLGFBQUM7Q0FBQSxBQS9CRCxDQUFvQyxxQkFBYSxHQStCaEQ7a0JBL0JvQixNQUFNIn0=
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiYmFubmVyLmpzIiwic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsiLi4vLi4vc3JjL2NvbnNlbnQtbWFuYWdlci9iYW5uZXIudHN4Il0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7O0FBQUEsNkNBQTRDO0FBQzVDLGdFQUFrQztBQUNsQyw4REFBc0M7QUFFdEMsSUFBTSxJQUFJLEdBQUcsdUJBQU0sQ0FBd0QsS0FBSyxDQUFDLDZOQUFBLE1BQzdFLEVBQVUsMkRBR0UsRUFBOEIsY0FDbkMsRUFBd0IscUVBSWxDLEtBUkcscUJBQVUsRUFHRSxVQUFBLEtBQUssSUFBSSxPQUFBLEtBQUssQ0FBQyxlQUFlLEVBQXJCLENBQXFCLEVBQ25DLFVBQUEsS0FBSyxJQUFJLE9BQUEsS0FBSyxDQUFDLFNBQVMsRUFBZixDQUFlLENBSWxDLENBQUE7QUFFRCxJQUFNLENBQUMsR0FBRyx1QkFBTSxDQUFDLEdBQUcsQ0FBQywySUFBQSx3RUFLcEIsSUFBQSxDQUFBO0FBU0Q7SUFBb0MsMEJBQW9CO0lBQXhEOztJQWlCQSxDQUFDO0lBZEMsdUJBQU0sR0FBTjtRQUNRLElBQUEsZUFLUSxFQUpaLHNCQUFRLEVBQ1Isb0JBQU8sRUFDUCxvQ0FBZSxFQUNmLHdCQUNZLENBQUE7UUFFZCxPQUFPLENBQ0wsOEJBQUMsSUFBSSxJQUFDLFFBQVEsRUFBRSxRQUFRLEVBQUUsZUFBZSxFQUFFLGVBQWUsRUFBRSxTQUFTLEVBQUUsU0FBUztZQUM5RSw4QkFBQyxDQUFDLFFBQUUsT0FBTyxDQUFLLENBQ1gsQ0FDUixDQUFBO0lBQ0gsQ0FBQztJQWZNLGtCQUFXLEdBQUcsUUFBUSxDQUFBO0lBZ0IvQixhQUFDO0NBQUEsQUFqQkQsQ0FBb0MscUJBQWEsR0FpQmhEO2tCQWpCb0IsTUFBTSJ9
