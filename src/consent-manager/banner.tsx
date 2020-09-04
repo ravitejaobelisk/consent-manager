@@ -13,13 +13,6 @@ const Root = styled<{ backgroundColor: string; textColor: string }, 'div'>('div'
   line-height: 1.3;
 `
 
-const P = styled('p')`
-  margin: 0;
-  &:not(:last-child) {
-    margin-bottom: 6px;
-  }
-`
-
 interface Props {
   innerRef: (node: HTMLElement | null) => void
   content: React.ReactNode
@@ -35,7 +28,7 @@ export default class Banner extends PureComponent<Props> {
 
     return (
       <Root innerRef={innerRef} backgroundColor={backgroundColor} textColor={textColor}>
-        <P>{content}</P>
+        {content}
       </Root>
     )
   }

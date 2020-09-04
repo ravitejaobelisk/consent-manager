@@ -5217,8 +5217,7 @@ var consentManager = (function(e) {
       $o,
       Zo,
       Qo,
-      ei,
-      ti = (function(e, t) {
+      ei = (function(e, t) {
         var n = function(r, a) {
           var o, i, s, c
           void 0 !== a && ((o = a.e), (i = a.label), (s = a.target), (c = a.shouldForwardProp))
@@ -5289,14 +5288,14 @@ var consentManager = (function(e) {
         }
         return n
       })(go, Se),
-      ni = function(e, t) {
+      ti = function(e, t) {
         return (
           Object.defineProperty ? Object.defineProperty(e, 'raw', { value: t }) : (e.raw = t), e
         )
       },
-      ri = Object(go.css)(
+      ni = Object(go.css)(
         Ro ||
-          (Ro = ni(
+          (Ro = ti(
             [
               "\n  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial,\n    sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';\n  -moz-osx-font-smoothing: grayscale;\n  -webkit-font-smoothing: antialiased;\n  font-smoothing: antialiased;\n  color: #435a6f;\n  font-size: 16px;\n  font-weight: 400;\n  line-height: 22px;\n  letter-spacing: -0.05px;\n"
             ],
@@ -5305,12 +5304,12 @@ var consentManager = (function(e) {
             ]
           ))
       ),
-      ai = function(e, t) {
+      ri = function(e, t) {
         return (
           Object.defineProperty ? Object.defineProperty(e, 'raw', { value: t }) : (e.raw = t), e
         )
       },
-      oi = (function() {
+      ai = (function() {
         var e = function(t, n) {
           return (e =
             Object.setPrototypeOf ||
@@ -5330,9 +5329,9 @@ var consentManager = (function(e) {
             (t.prototype = null === n ? Object.create(n) : ((r.prototype = n.prototype), new r()))
         }
       })(),
-      ii = ti('div')(
+      oi = ei('div')(
         jo ||
-          (jo = ai(
+          (jo = ri(
             [
               '\n  ',
               ';\n  position: relative;\n  padding: 8px;\n  background: ',
@@ -5346,7 +5345,7 @@ var consentManager = (function(e) {
               ';\n  text-align: center;\n  font-size: 12px;\n  line-height: 1.3;\n'
             ]
           )),
-        ri,
+        ni,
         function(e) {
           return e.backgroundColor
         },
@@ -5354,43 +5353,32 @@ var consentManager = (function(e) {
           return e.textColor
         }
       ),
-      si = ti('p')(
-        Do ||
-          (Do = ai(
-            ['\n  margin: 0;\n  &:not(:last-child) {\n    margin-bottom: 6px;\n  }\n'],
-            ['\n  margin: 0;\n  &:not(:last-child) {\n    margin-bottom: 6px;\n  }\n']
-          ))
-      ),
-      ci = (function(e) {
+      ii = (function(e) {
         function t() {
           return (null !== e && e.apply(this, arguments)) || this
         }
         return (
-          oi(t, e),
+          ai(t, e),
           (t.prototype.render = function() {
             var e = this.props,
               t = e.innerRef,
               n = e.content,
               r = e.backgroundColor,
               a = e.textColor
-            return Se.createElement(
-              ii,
-              { innerRef: t, backgroundColor: r, textColor: a },
-              Se.createElement(si, null, n)
-            )
+            return Se.createElement(oi, { innerRef: t, backgroundColor: r, textColor: a }, n)
           }),
           (t.displayName = 'Banner'),
           t
         )
       })(ke),
-      ui = n(16),
-      li = n.n(ui),
-      fi = function(e, t) {
+      si = n(16),
+      ci = n.n(si),
+      ui = function(e, t) {
         return (
           Object.defineProperty ? Object.defineProperty(e, 'raw', { value: t }) : (e.raw = t), e
         )
       },
-      pi = (function() {
+      li = (function() {
         var e = function(t, n) {
           return (e =
             Object.setPrototypeOf ||
@@ -5410,31 +5398,31 @@ var consentManager = (function(e) {
             (t.prototype = null === n ? Object.create(n) : ((r.prototype = n.prototype), new r()))
         }
       })(),
-      di = ti('div')(
+      fi = ei('div')(
+        Do ||
+          (Do = ui(
+            [
+              '\n  position: fixed;\n  left: 0;\n  right: 0;\n  top: 0;\n  bottom: 0;\n  z-index: 1000;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  background: rgba(67, 90, 111, 0.699);\n'
+            ],
+            [
+              '\n  position: fixed;\n  left: 0;\n  right: 0;\n  top: 0;\n  bottom: 0;\n  z-index: 1000;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  background: rgba(67, 90, 111, 0.699);\n'
+            ]
+          ))
+      ),
+      pi = Object(go.keyframes)(
         zo ||
-          (zo = fi(
+          (zo = ui(
             [
-              '\n  position: fixed;\n  left: 0;\n  right: 0;\n  top: 0;\n  bottom: 0;\n  z-index: 1000;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  background: rgba(67, 90, 111, 0.699);\n'
+              '\n  from {\n    transform: scale(0.8);\n    opacity: 0;\n  }\n  to {\n    transform: scale(1);\n    opacity: 1;\n  }\n'
             ],
             [
-              '\n  position: fixed;\n  left: 0;\n  right: 0;\n  top: 0;\n  bottom: 0;\n  z-index: 1000;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  background: rgba(67, 90, 111, 0.699);\n'
+              '\n  from {\n    transform: scale(0.8);\n    opacity: 0;\n  }\n  to {\n    transform: scale(1);\n    opacity: 1;\n  }\n'
             ]
           ))
       ),
-      hi = Object(go.keyframes)(
+      di = ei('section')(
         Mo ||
-          (Mo = fi(
-            [
-              '\n  from {\n    transform: scale(0.8);\n    opacity: 0;\n  }\n  to {\n    transform: scale(1);\n    opacity: 1;\n  }\n'
-            ],
-            [
-              '\n  from {\n    transform: scale(0.8);\n    opacity: 0;\n  }\n  to {\n    transform: scale(1);\n    opacity: 1;\n  }\n'
-            ]
-          ))
-      ),
-      mi = ti('section')(
-        Io ||
-          (Io = fi(
+          (Mo = ui(
             [
               '\n  ',
               ';\n  display: flex;\n  flex-direction: column;\n  max-width: calc(100vw - 16px);\n  max-height: calc(100vh - 16px);\n  width: ',
@@ -5452,73 +5440,73 @@ var consentManager = (function(e) {
               ' both;\n'
             ]
           )),
-        ri,
+        ni,
         function(e) {
           return e.width
         },
-        hi,
+        pi,
         '200ms',
         'cubic-bezier(0.0, 0.0, 0.2, 1)'
       ),
-      bi = ti('form')(
-        Fo ||
-          (Fo = fi(
+      hi = ei('form')(
+        Io ||
+          (Io = ui(
             ['\n  display: flex;\n  flex-direction: column;\n  min-height: 0;\n'],
             ['\n  display: flex;\n  flex-direction: column;\n  min-height: 0;\n']
           ))
       ),
-      vi = ti('div')(
+      mi = ei('div')(
+        Fo ||
+          (Fo = ui(
+            [
+              '\n  flex: 1 0 auto;\n  display: flex;\n  align-items: center;\n  justify-content: space-between;\n  padding: 12px 16px;\n  border-bottom: 1px solid rgba(67, 90, 111, 0.079);\n'
+            ],
+            [
+              '\n  flex: 1 0 auto;\n  display: flex;\n  align-items: center;\n  justify-content: space-between;\n  padding: 12px 16px;\n  border-bottom: 1px solid rgba(67, 90, 111, 0.079);\n'
+            ]
+          ))
+      ),
+      bi = ei('h2')(
         Lo ||
-          (Lo = fi(
+          (Lo = ui(
             [
-              '\n  flex: 1 0 auto;\n  display: flex;\n  align-items: center;\n  justify-content: space-between;\n  padding: 12px 16px;\n  border-bottom: 1px solid rgba(67, 90, 111, 0.079);\n'
+              '\n  margin: 0;\n  color: #1f4160;\n  font-size: 16px;\n  font-weight: 600;\n  line-height: 1.3;\n'
             ],
             [
-              '\n  flex: 1 0 auto;\n  display: flex;\n  align-items: center;\n  justify-content: space-between;\n  padding: 12px 16px;\n  border-bottom: 1px solid rgba(67, 90, 111, 0.079);\n'
+              '\n  margin: 0;\n  color: #1f4160;\n  font-size: 16px;\n  font-weight: 600;\n  line-height: 1.3;\n'
             ]
           ))
       ),
-      gi = ti('h2')(
+      vi = ei('button')(
         Bo ||
-          (Bo = fi(
+          (Bo = ui(
             [
-              '\n  margin: 0;\n  color: #1f4160;\n  font-size: 16px;\n  font-weight: 600;\n  line-height: 1.3;\n'
+              '\n  padding: 8px;\n  border: none;\n  background: none;\n  color: inherit;\n  font: inherit;\n  font-size: 14px;\n  line-height: 1;\n  cursor: pointer;\n'
             ],
             [
-              '\n  margin: 0;\n  color: #1f4160;\n  font-size: 16px;\n  font-weight: 600;\n  line-height: 1.3;\n'
+              '\n  padding: 8px;\n  border: none;\n  background: none;\n  color: inherit;\n  font: inherit;\n  font-size: 14px;\n  line-height: 1;\n  cursor: pointer;\n'
             ]
           ))
       ),
-      _i = ti('button')(
+      gi = ei('div')(
         Uo ||
-          (Uo = fi(
+          (Uo = ui(
             [
-              '\n  padding: 8px;\n  border: none;\n  background: none;\n  color: inherit;\n  font: inherit;\n  font-size: 14px;\n  line-height: 1;\n  cursor: pointer;\n'
+              '\n  overflow-y: auto;\n  padding: 16px;\n  padding-bottom: 0;\n  min-height: 0;\n  font-size: 14px;\n  line-height: 1.2;\n\n  p {\n    margin: 0;\n    &:not(:last-child) {\n      margin-bottom: 0.7em;\n    }\n  }\n\n  a {\n    color: #47b881;\n    &:hover {\n      color: #64c395;\n    }\n    &:active {\n      color: #248953;\n    }\n  }\n'
             ],
             [
-              '\n  padding: 8px;\n  border: none;\n  background: none;\n  color: inherit;\n  font: inherit;\n  font-size: 14px;\n  line-height: 1;\n  cursor: pointer;\n'
+              '\n  overflow-y: auto;\n  padding: 16px;\n  padding-bottom: 0;\n  min-height: 0;\n  font-size: 14px;\n  line-height: 1.2;\n\n  p {\n    margin: 0;\n    &:not(:last-child) {\n      margin-bottom: 0.7em;\n    }\n  }\n\n  a {\n    color: #47b881;\n    &:hover {\n      color: #64c395;\n    }\n    &:active {\n      color: #248953;\n    }\n  }\n'
             ]
           ))
       ),
-      yi = ti('div')(
+      _i = ei('div')(
         Ho ||
-          (Ho = fi(
-            [
-              '\n  overflow-y: auto;\n  padding: 16px;\n  padding-bottom: 0;\n  min-height: 0;\n  font-size: 14px;\n  line-height: 1.2;\n\n  p {\n    margin: 0;\n    &:not(:last-child) {\n      margin-bottom: 0.7em;\n    }\n  }\n\n  a {\n    color: #47b881;\n    &:hover {\n      color: #64c395;\n    }\n    &:active {\n      color: #248953;\n    }\n  }\n'
-            ],
-            [
-              '\n  overflow-y: auto;\n  padding: 16px;\n  padding-bottom: 0;\n  min-height: 0;\n  font-size: 14px;\n  line-height: 1.2;\n\n  p {\n    margin: 0;\n    &:not(:last-child) {\n      margin-bottom: 0.7em;\n    }\n  }\n\n  a {\n    color: #47b881;\n    &:hover {\n      color: #64c395;\n    }\n    &:active {\n      color: #248953;\n    }\n  }\n'
-            ]
-          ))
-      ),
-      Ai = ti('div')(
-        Yo ||
-          (Yo = fi(
+          (Ho = ui(
             ['\n  padding: 16px;\n  text-align: right;\n'],
             ['\n  padding: 16px;\n  text-align: right;\n']
           ))
       ),
-      wi = (function(e) {
+      yi = (function(e) {
         function t(t) {
           var n = e.call(this, t) || this
           return (
@@ -5536,7 +5524,7 @@ var consentManager = (function(e) {
               var t = n.props.onCancel
               t && 27 === e.keyCode && t()
             }),
-            (n.titleId = li()()),
+            (n.titleId = ci()()),
             (n.container = document.createElement('div')),
             n.container.setAttribute('data-consent-manager-dialog', ''),
             document.body.appendChild(n.container),
@@ -5544,7 +5532,7 @@ var consentManager = (function(e) {
           )
         }
         return (
-          pi(t, e),
+          li(t, e),
           (t.prototype.render = function() {
             var e = this.props,
               t = e.onCancel,
@@ -5554,10 +5542,10 @@ var consentManager = (function(e) {
               o = e.buttons,
               i = e.width,
               s = Se.createElement(
-                di,
+                fi,
                 { onClick: this.handleOverlayClick },
                 Se.createElement(
-                  mi,
+                  di,
                   {
                     innerRef: this.handleRootRef,
                     role: 'dialog',
@@ -5566,21 +5554,21 @@ var consentManager = (function(e) {
                     width: i
                   },
                   Se.createElement(
-                    vi,
+                    mi,
                     null,
-                    Se.createElement(gi, { id: this.titleId }, r),
+                    Se.createElement(bi, { id: this.titleId }, r),
                     t &&
                       Se.createElement(
-                        _i,
+                        vi,
                         { onClick: t, title: 'Cancel', 'aria-label': 'Cancel' },
                         '✕'
                       )
                   ),
                   Se.createElement(
-                    bi,
+                    hi,
                     { innerRef: this.handleFormRef, onSubmit: n },
-                    Se.createElement(yi, null, a),
-                    Se.createElement(Ai, null, o)
+                    Se.createElement(gi, null, a),
+                    Se.createElement(_i, null, o)
                   )
                 )
               )
@@ -5608,14 +5596,14 @@ var consentManager = (function(e) {
           t
         )
       })(ke),
-      Ci = function(e, t) {
+      Ai = function(e, t) {
         return (
           Object.defineProperty ? Object.defineProperty(e, 'raw', { value: t }) : (e.raw = t), e
         )
       },
-      ki = Object(go.css)(
-        Ko ||
-          (Ko = Ci(
+      wi = Object(go.css)(
+        Yo ||
+          (Yo = Ai(
             [
               '\n  height: 32px;\n  padding: 0 16px;\n  border: none;\n  border-radius: 4px;\n  color: inherit;\n  font: inherit;\n  font-size: 12px;\n  line-height: 1;\n  cursor: pointer;\n  outline: none;\n  transition: box-shadow 80ms ease-in-out;\n'
             ],
@@ -5624,37 +5612,37 @@ var consentManager = (function(e) {
             ]
           ))
       ),
-      xi = ti('button')(
+      Ci = ei('button')(
+        Ko ||
+          (Ko = Ai(
+            [
+              '\n  ',
+              ';\n  margin-right: 8px;\n  background-color: #fff;\n  background-image: linear-gradient(to top, rgba(67, 90, 111, 0.041), rgba(255, 255, 255, 0.041));\n  box-shadow: inset 0 0 0 1px rgba(67, 90, 111, 0.146), inset 0 -1px 1px 0 rgba(67, 90, 111, 0.079);\n  &:hover {\n    background-image: linear-gradient(to top, rgba(67, 90, 111, 0.057), rgba(67, 90, 111, 0.025));\n    box-shadow: inset 0 0 0 1px rgba(67, 90, 111, 0.255),\n      inset 0 -1px 1px 0 rgba(67, 90, 111, 0.114);\n  }\n  &:focus {\n    box-shadow: 0 0 0 3px rgba(1, 108, 209, 0.146), inset 0 0 0 1px rgba(67, 90, 111, 0.38),\n      inset 0 -1px 1px 0 rgba(67, 90, 111, 0.079);\n  }\n  &:active {\n    background: rgba(1, 108, 209, 0.079);\n    box-shadow: inset 0 0 0 1px rgba(67, 90, 111, 0.146),\n      inset 0 -1px 1px 0 rgba(67, 90, 111, 0.079);\n  }\n'
+            ],
+            [
+              '\n  ',
+              ';\n  margin-right: 8px;\n  background-color: #fff;\n  background-image: linear-gradient(to top, rgba(67, 90, 111, 0.041), rgba(255, 255, 255, 0.041));\n  box-shadow: inset 0 0 0 1px rgba(67, 90, 111, 0.146), inset 0 -1px 1px 0 rgba(67, 90, 111, 0.079);\n  &:hover {\n    background-image: linear-gradient(to top, rgba(67, 90, 111, 0.057), rgba(67, 90, 111, 0.025));\n    box-shadow: inset 0 0 0 1px rgba(67, 90, 111, 0.255),\n      inset 0 -1px 1px 0 rgba(67, 90, 111, 0.114);\n  }\n  &:focus {\n    box-shadow: 0 0 0 3px rgba(1, 108, 209, 0.146), inset 0 0 0 1px rgba(67, 90, 111, 0.38),\n      inset 0 -1px 1px 0 rgba(67, 90, 111, 0.079);\n  }\n  &:active {\n    background: rgba(1, 108, 209, 0.079);\n    box-shadow: inset 0 0 0 1px rgba(67, 90, 111, 0.146),\n      inset 0 -1px 1px 0 rgba(67, 90, 111, 0.079);\n  }\n'
+            ]
+          )),
+        wi
+      ),
+      ki = ei('button')(
         Go ||
-          (Go = Ci(
+          (Go = Ai(
             [
               '\n  ',
-              ';\n  margin-right: 8px;\n  background-color: #fff;\n  background-image: linear-gradient(to top, rgba(67, 90, 111, 0.041), rgba(255, 255, 255, 0.041));\n  box-shadow: inset 0 0 0 1px rgba(67, 90, 111, 0.146), inset 0 -1px 1px 0 rgba(67, 90, 111, 0.079);\n  &:hover {\n    background-image: linear-gradient(to top, rgba(67, 90, 111, 0.057), rgba(67, 90, 111, 0.025));\n    box-shadow: inset 0 0 0 1px rgba(67, 90, 111, 0.255),\n      inset 0 -1px 1px 0 rgba(67, 90, 111, 0.114);\n  }\n  &:focus {\n    box-shadow: 0 0 0 3px rgba(1, 108, 209, 0.146), inset 0 0 0 1px rgba(67, 90, 111, 0.38),\n      inset 0 -1px 1px 0 rgba(67, 90, 111, 0.079);\n  }\n  &:active {\n    background: rgba(1, 108, 209, 0.079);\n    box-shadow: inset 0 0 0 1px rgba(67, 90, 111, 0.146),\n      inset 0 -1px 1px 0 rgba(67, 90, 111, 0.079);\n  }\n'
+              ';\n  background-color: #47b881;\n  background-image: linear-gradient(to top, #3faf77, #47b881);\n  box-shadow: inset 0 0 0 1px rgba(67, 90, 111, 0.204), inset 0 -1px 1px 0 rgba(67, 90, 111, 0.204);\n  color: #fff;\n  &:hover {\n    background-image: linear-gradient(to top, #37a56d, #3faf77);\n  }\n  &:focus {\n    box-shadow: 0 0 0 3px rgba(71, 184, 129, 0.477), inset 0 0 0 1px rgba(71, 184, 129, 0.204),\n      inset 0 -1px 1px 0 rgba(71, 184, 129, 0.204);\n  }\n  &:active {\n    background-image: linear-gradient(to top, #2d9760, #248953);\n    box-shadow: inset 0 0 0 1px rgba(71, 184, 129, 0.204),\n      inset 0 -1px 1px 0 rgba(71, 184, 129, 0.204);\n  }\n'
             ],
             [
               '\n  ',
-              ';\n  margin-right: 8px;\n  background-color: #fff;\n  background-image: linear-gradient(to top, rgba(67, 90, 111, 0.041), rgba(255, 255, 255, 0.041));\n  box-shadow: inset 0 0 0 1px rgba(67, 90, 111, 0.146), inset 0 -1px 1px 0 rgba(67, 90, 111, 0.079);\n  &:hover {\n    background-image: linear-gradient(to top, rgba(67, 90, 111, 0.057), rgba(67, 90, 111, 0.025));\n    box-shadow: inset 0 0 0 1px rgba(67, 90, 111, 0.255),\n      inset 0 -1px 1px 0 rgba(67, 90, 111, 0.114);\n  }\n  &:focus {\n    box-shadow: 0 0 0 3px rgba(1, 108, 209, 0.146), inset 0 0 0 1px rgba(67, 90, 111, 0.38),\n      inset 0 -1px 1px 0 rgba(67, 90, 111, 0.079);\n  }\n  &:active {\n    background: rgba(1, 108, 209, 0.079);\n    box-shadow: inset 0 0 0 1px rgba(67, 90, 111, 0.146),\n      inset 0 -1px 1px 0 rgba(67, 90, 111, 0.079);\n  }\n'
+              ';\n  background-color: #47b881;\n  background-image: linear-gradient(to top, #3faf77, #47b881);\n  box-shadow: inset 0 0 0 1px rgba(67, 90, 111, 0.204), inset 0 -1px 1px 0 rgba(67, 90, 111, 0.204);\n  color: #fff;\n  &:hover {\n    background-image: linear-gradient(to top, #37a56d, #3faf77);\n  }\n  &:focus {\n    box-shadow: 0 0 0 3px rgba(71, 184, 129, 0.477), inset 0 0 0 1px rgba(71, 184, 129, 0.204),\n      inset 0 -1px 1px 0 rgba(71, 184, 129, 0.204);\n  }\n  &:active {\n    background-image: linear-gradient(to top, #2d9760, #248953);\n    box-shadow: inset 0 0 0 1px rgba(71, 184, 129, 0.204),\n      inset 0 -1px 1px 0 rgba(71, 184, 129, 0.204);\n  }\n'
             ]
           )),
-        ki
+        wi
       ),
-      Ei = ti('button')(
+      xi = ei('button')(
         Wo ||
-          (Wo = Ci(
-            [
-              '\n  ',
-              ';\n  background-color: #47b881;\n  background-image: linear-gradient(to top, #3faf77, #47b881);\n  box-shadow: inset 0 0 0 1px rgba(67, 90, 111, 0.204), inset 0 -1px 1px 0 rgba(67, 90, 111, 0.204);\n  color: #fff;\n  &:hover {\n    background-image: linear-gradient(to top, #37a56d, #3faf77);\n  }\n  &:focus {\n    box-shadow: 0 0 0 3px rgba(71, 184, 129, 0.477), inset 0 0 0 1px rgba(71, 184, 129, 0.204),\n      inset 0 -1px 1px 0 rgba(71, 184, 129, 0.204);\n  }\n  &:active {\n    background-image: linear-gradient(to top, #2d9760, #248953);\n    box-shadow: inset 0 0 0 1px rgba(71, 184, 129, 0.204),\n      inset 0 -1px 1px 0 rgba(71, 184, 129, 0.204);\n  }\n'
-            ],
-            [
-              '\n  ',
-              ';\n  background-color: #47b881;\n  background-image: linear-gradient(to top, #3faf77, #47b881);\n  box-shadow: inset 0 0 0 1px rgba(67, 90, 111, 0.204), inset 0 -1px 1px 0 rgba(67, 90, 111, 0.204);\n  color: #fff;\n  &:hover {\n    background-image: linear-gradient(to top, #37a56d, #3faf77);\n  }\n  &:focus {\n    box-shadow: 0 0 0 3px rgba(71, 184, 129, 0.477), inset 0 0 0 1px rgba(71, 184, 129, 0.204),\n      inset 0 -1px 1px 0 rgba(71, 184, 129, 0.204);\n  }\n  &:active {\n    background-image: linear-gradient(to top, #2d9760, #248953);\n    box-shadow: inset 0 0 0 1px rgba(71, 184, 129, 0.204),\n      inset 0 -1px 1px 0 rgba(71, 184, 129, 0.204);\n  }\n'
-            ]
-          )),
-        ki
-      ),
-      Si = ti('button')(
-        qo ||
-          (qo = Ci(
+          (Wo = Ai(
             [
               '\n  ',
               ';\n  background-color: #f36331;\n  background-image: linear-gradient(to top, #f4541d, #f36331);\n  box-shadow: inset 0 0 0 1px rgba(67, 90, 111, 0.204), inset 0 -1px 1px 0 rgba(67, 90, 111, 0.204);\n  color: #fff;\n  &:hover {\n    background-image: linear-gradient(to top, #f4450a, #f4541d);\n  }\n  &:focus {\n    box-shadow: 0 0 0 3px rgba(243, 99, 49, 0.477), inset 0 0 0 1px rgba(243, 99, 49, 0.204),\n      inset 0 -1px 1px 0 rgba(243, 99, 49, 0.204);\n  }\n  &:active {\n    background-image: linear-gradient(to top, #dd3c06, #c63403);\n    box-shadow: inset 0 0 0 1px rgba(67, 90, 111, 0.204),\n      inset 0 -1px 1px 0 rgba(67, 90, 111, 0.204);\n  }\n'
@@ -5664,14 +5652,14 @@ var consentManager = (function(e) {
               ';\n  background-color: #f36331;\n  background-image: linear-gradient(to top, #f4541d, #f36331);\n  box-shadow: inset 0 0 0 1px rgba(67, 90, 111, 0.204), inset 0 -1px 1px 0 rgba(67, 90, 111, 0.204);\n  color: #fff;\n  &:hover {\n    background-image: linear-gradient(to top, #f4450a, #f4541d);\n  }\n  &:focus {\n    box-shadow: 0 0 0 3px rgba(243, 99, 49, 0.477), inset 0 0 0 1px rgba(243, 99, 49, 0.204),\n      inset 0 -1px 1px 0 rgba(243, 99, 49, 0.204);\n  }\n  &:active {\n    background-image: linear-gradient(to top, #dd3c06, #c63403);\n    box-shadow: inset 0 0 0 1px rgba(67, 90, 111, 0.204),\n      inset 0 -1px 1px 0 rgba(67, 90, 111, 0.204);\n  }\n'
             ]
           )),
-        ki
+        wi
       ),
-      Pi = function(e, t) {
+      Ei = function(e, t) {
         return (
           Object.defineProperty ? Object.defineProperty(e, 'raw', { value: t }) : (e.raw = t), e
         )
       },
-      Ti = (function() {
+      Si = (function() {
         var e = function(t, n) {
           return (e =
             Object.setPrototypeOf ||
@@ -5691,30 +5679,30 @@ var consentManager = (function(e) {
             (t.prototype = null === n ? Object.create(n) : ((r.prototype = n.prototype), new r()))
         }
       })(),
-      Oi = Object(go.css)(
-        Vo ||
-          (Vo = Pi(
+      Pi = Object(go.css)(
+        qo ||
+          (qo = Ei(
             ['\n  @media (max-width: 600px) {\n    display: none;\n  }\n'],
             ['\n  @media (max-width: 600px) {\n    display: none;\n  }\n']
           ))
       ),
-      Ni = ti('div')(
-        Xo ||
-          (Xo = Pi(
+      Ti = ei('div')(
+        Vo ||
+          (Vo = Ei(
             ['\n  overflow-x: auto;\n  margin-top: 16px;\n'],
             ['\n  overflow-x: auto;\n  margin-top: 16px;\n']
           ))
       ),
-      Ri = ti('table')(
-        Jo ||
-          (Jo = Pi(
+      Oi = ei('table')(
+        Xo ||
+          (Xo = Ei(
             ['\n  border-collapse: collapse;\n  font-size: 12px;\n'],
             ['\n  border-collapse: collapse;\n  font-size: 12px;\n']
           ))
       ),
-      ji = ti('th')(
-        $o ||
-          ($o = Pi(
+      Ni = ei('th')(
+        Jo ||
+          (Jo = Ei(
             [
               '\n  background: #f7f8fa;\n  color: #1f4160;\n  font-weight: 600;\n  text-align: left;\n  border-width: 2px;\n'
             ],
@@ -5723,27 +5711,27 @@ var consentManager = (function(e) {
             ]
           ))
       ),
-      Di = ti('th')(
-        Zo ||
-          (Zo = Pi(
+      Ri = ei('th')(
+        $o ||
+          ($o = Ei(
             ['\n  font-weight: normal;\n  text-align: left;\n'],
             ['\n  font-weight: normal;\n  text-align: left;\n']
           ))
       ),
-      zi = ti('tr')(
+      ji = ei('tr')(
+        Zo ||
+          (Zo = Ei(
+            [
+              '\n  th,\n  td {\n    vertical-align: top;\n    padding: 8px 12px;\n    border: 1px solid rgba(67, 90, 111, 0.114);\n  }\n  td {\n    border-top: none;\n  }\n'
+            ],
+            [
+              '\n  th,\n  td {\n    vertical-align: top;\n    padding: 8px 12px;\n    border: 1px solid rgba(67, 90, 111, 0.114);\n  }\n  td {\n    border-top: none;\n  }\n'
+            ]
+          ))
+      ),
+      Di = ei('td')(
         Qo ||
-          (Qo = Pi(
-            [
-              '\n  th,\n  td {\n    vertical-align: top;\n    padding: 8px 12px;\n    border: 1px solid rgba(67, 90, 111, 0.114);\n  }\n  td {\n    border-top: none;\n  }\n'
-            ],
-            [
-              '\n  th,\n  td {\n    vertical-align: top;\n    padding: 8px 12px;\n    border: 1px solid rgba(67, 90, 111, 0.114);\n  }\n  td {\n    border-top: none;\n  }\n'
-            ]
-          ))
-      ),
-      Mi = ti('td')(
-        ei ||
-          (ei = Pi(
+          (Qo = Ei(
             [
               '\n  input {\n    vertical-align: middle;\n  }\n  label {\n    display: block;\n    margin-bottom: 4px;\n    white-space: nowrap;\n  }\n'
             ],
@@ -5752,7 +5740,7 @@ var consentManager = (function(e) {
             ]
           ))
       ),
-      Ii = (function(e) {
+      zi = (function(e) {
         function t() {
           var t = (null !== e && e.apply(this, arguments)) || this
           return (
@@ -5779,7 +5767,7 @@ var consentManager = (function(e) {
           )
         }
         return (
-          Ti(t, e),
+          Si(t, e),
           (t.prototype.render = function() {
             var e = this,
               t = this.props,
@@ -5800,29 +5788,29 @@ var consentManager = (function(e) {
               b = Se.createElement(
                 'div',
                 null,
-                Se.createElement(xi, { type: 'button', onClick: r }, 'Cancel'),
-                Se.createElement(Ei, { type: 'submit' }, 'Save')
+                Se.createElement(Ci, { type: 'button', onClick: r }, 'Cancel'),
+                Se.createElement(ki, { type: 'submit' }, 'Save')
               )
             return Se.createElement(
-              wi,
+              yi,
               { innerRef: n, title: p, buttons: b, onCancel: r, onSubmit: this.handleSubmit },
               d,
               Se.createElement(
-                Ni,
+                Ti,
                 null,
                 Se.createElement(
-                  Ri,
+                  Oi,
                   null,
                   Se.createElement(
                     'thead',
                     null,
                     Se.createElement(
-                      zi,
+                      ji,
                       null,
-                      Se.createElement(ji, { scope: 'col' }, 'Allow'),
-                      Se.createElement(ji, { scope: 'col' }, 'Category'),
-                      Se.createElement(ji, { scope: 'col' }, 'Purpose'),
-                      Se.createElement(ji, { scope: 'col', className: Oi }, 'Tools')
+                      Se.createElement(Ni, { scope: 'col' }, 'Allow'),
+                      Se.createElement(Ni, { scope: 'col' }, 'Category'),
+                      Se.createElement(Ni, { scope: 'col' }, 'Purpose'),
+                      Se.createElement(Ni, { scope: 'col', className: Pi }, 'Tools')
                     )
                   ),
                   Se.createElement(
@@ -5833,10 +5821,10 @@ var consentManager = (function(e) {
                         Se.Fragment,
                         null,
                         Se.createElement(
-                          zi,
+                          ji,
                           null,
                           Se.createElement(
-                            Mi,
+                            Di,
                             null,
                             Se.createElement(
                               'label',
@@ -5870,7 +5858,7 @@ var consentManager = (function(e) {
                               'No'
                             )
                           ),
-                          Se.createElement(Di, { scope: 'row' }, 'Functional'),
+                          Se.createElement(Ri, { scope: 'row' }, 'Functional'),
                           Se.createElement(
                             'td',
                             null,
@@ -5881,13 +5869,13 @@ var consentManager = (function(e) {
                             ),
                             Se.createElement(
                               'p',
-                              { className: Oi },
+                              { className: Pi },
                               'For example, these tools enable you to communicate with us via live chat.'
                             )
                           ),
                           Se.createElement(
                             'td',
-                            { className: Oi },
+                            { className: Pi },
                             i
                               .map(function(e) {
                                 return e.name
@@ -5896,10 +5884,10 @@ var consentManager = (function(e) {
                           )
                         ),
                         Se.createElement(
-                          zi,
+                          ji,
                           null,
                           Se.createElement(
-                            Mi,
+                            Di,
                             null,
                             Se.createElement(
                               'label',
@@ -5933,7 +5921,7 @@ var consentManager = (function(e) {
                               'No'
                             )
                           ),
-                          Se.createElement(Di, { scope: 'row' }, 'Marketing and Analytics'),
+                          Se.createElement(Ri, { scope: 'row' }, 'Marketing and Analytics'),
                           Se.createElement(
                             'td',
                             null,
@@ -5944,13 +5932,13 @@ var consentManager = (function(e) {
                             ),
                             Se.createElement(
                               'p',
-                              { className: Oi },
+                              { className: Pi },
                               'For example, we collect information about which pages you visit to help us present more relevant information.'
                             )
                           ),
                           Se.createElement(
                             'td',
-                            { className: Oi },
+                            { className: Pi },
                             a
                               .map(function(e) {
                                 return e.name
@@ -5959,10 +5947,10 @@ var consentManager = (function(e) {
                           )
                         ),
                         Se.createElement(
-                          zi,
+                          ji,
                           null,
                           Se.createElement(
-                            Mi,
+                            Di,
                             null,
                             Se.createElement(
                               'label',
@@ -5996,7 +5984,7 @@ var consentManager = (function(e) {
                               'No'
                             )
                           ),
-                          Se.createElement(Di, { scope: 'row' }, 'Advertising'),
+                          Se.createElement(Ri, { scope: 'row' }, 'Advertising'),
                           Se.createElement(
                             'td',
                             null,
@@ -6007,13 +5995,13 @@ var consentManager = (function(e) {
                             ),
                             Se.createElement(
                               'p',
-                              { className: Oi },
+                              { className: Pi },
                               'For example, we may serve you a personalized ad based on the pages you visit on our site.'
                             )
                           ),
                           Se.createElement(
                             'td',
-                            { className: Oi },
+                            { className: Pi },
                             o
                               .map(function(e) {
                                 return e.name
@@ -6029,10 +6017,10 @@ var consentManager = (function(e) {
                           a = r.integrations,
                           o = r.purpose
                         return Se.createElement(
-                          zi,
+                          ji,
                           { key: n },
                           Se.createElement(
-                            Mi,
+                            Di,
                             null,
                             Se.createElement(
                               'label',
@@ -6066,11 +6054,11 @@ var consentManager = (function(e) {
                               'No'
                             )
                           ),
-                          Se.createElement(Di, { scope: 'row' }, n),
+                          Se.createElement(Ri, { scope: 'row' }, n),
                           Se.createElement('td', null, Se.createElement('p', null, o)),
                           Se.createElement(
                             'td',
-                            { className: Oi },
+                            { className: Pi },
                             f
                               .filter(function(e) {
                                 return a.includes(e.id)
@@ -6083,10 +6071,10 @@ var consentManager = (function(e) {
                         )
                       }),
                     Se.createElement(
-                      zi,
+                      ji,
                       null,
                       Se.createElement('td', null, 'N/A'),
-                      Se.createElement(Di, { scope: 'row' }, 'Essential'),
+                      Se.createElement(Ri, { scope: 'row' }, 'Essential'),
                       Se.createElement(
                         'td',
                         null,
@@ -6101,7 +6089,7 @@ var consentManager = (function(e) {
                           'For example, we store your website data collection preferences so we can honor them if you return to our site. You can disable these cookies in your browser settings but if you do the site may not work as intended.'
                         )
                       ),
-                      Se.createElement('td', { className: Oi })
+                      Se.createElement('td', { className: Pi })
                     )
                   )
                 )
@@ -6113,7 +6101,7 @@ var consentManager = (function(e) {
           t
         )
       })(ke),
-      Fi = (function() {
+      Mi = (function() {
         var e = function(t, n) {
           return (e =
             Object.setPrototypeOf ||
@@ -6133,7 +6121,7 @@ var consentManager = (function(e) {
             (t.prototype = null === n ? Object.create(n) : ((r.prototype = n.prototype), new r()))
         }
       })(),
-      Li = (function(e) {
+      Ii = (function(e) {
         function t() {
           var t = (null !== e && e.apply(this, arguments)) || this
           return (
@@ -6149,7 +6137,7 @@ var consentManager = (function(e) {
           )
         }
         return (
-          Fi(t, e),
+          Mi(t, e),
           (t.prototype.render = function() {
             var e = this.props,
               t = e.innerRef,
@@ -6159,11 +6147,11 @@ var consentManager = (function(e) {
               o = Se.createElement(
                 'div',
                 null,
-                Se.createElement(xi, { type: 'button', onClick: n }, 'Go Back'),
-                Se.createElement(Si, { type: 'submit' }, 'Yes, Cancel')
+                Se.createElement(Ci, { type: 'button', onClick: n }, 'Go Back'),
+                Se.createElement(xi, { type: 'submit' }, 'Yes, Cancel')
               )
             return Se.createElement(
-              wi,
+              yi,
               { innerRef: t, title: r, buttons: o, onSubmit: this.handleSubmit, width: '500px' },
               a
             )
@@ -6178,8 +6166,8 @@ var consentManager = (function(e) {
           t
         )
       })(ke),
-      Bi = ['Advertising', 'Tag Managers'],
-      Ui = [
+      Fi = ['Advertising', 'Tag Managers'],
+      Li = [
         'CRM',
         'Customer Success',
         'Deep Linking',
@@ -6190,11 +6178,11 @@ var consentManager = (function(e) {
         'SMS & Push Notifications',
         'Security & Fraud'
       ],
-      Hi = new Ie.a()
-    function Yi() {
-      Hi.emit('openDialog')
+      Bi = new Ie.a()
+    function Ui() {
+      Bi.emit('openDialog')
     }
-    var Ki = function(e) {
+    var Hi = function(e) {
         var t = Se.useState(
             e.workspaceAddedNewDestinations && 'ask' === e.defaultDestinationBehavior
           ),
@@ -6212,11 +6200,11 @@ var consentManager = (function(e) {
                 n = [],
                 r = [],
                 a = function(e) {
-                  Bi.find(function(t) {
+                  Fi.find(function(t) {
                     return t === e.category
                   })
                     ? n.push(e)
-                    : Ui.find(function(t) {
+                    : Li.find(function(t) {
                         return t === e.category
                       })
                     ? r.push(e)
@@ -6273,12 +6261,12 @@ var consentManager = (function(e) {
           ),
           Se.useEffect(function() {
             return (
-              Hi.on('openDialog', m),
+              Bi.on('openDialog', m),
               e.isConsentRequired &&
                 e.implyConsentOnInteraction &&
                 document.body.addEventListener('click', h, !1),
               function() {
-                Hi.removeListener('openDialog', m),
+                Bi.removeListener('openDialog', m),
                   document.body.removeEventListener('click', h, !1)
               }
             )
@@ -6292,7 +6280,7 @@ var consentManager = (function(e) {
             'div',
             null,
             (b || e.showConsentByChoice) &&
-              Se.createElement(ci, {
+              Se.createElement(ii, {
                 innerRef: function(e) {
                   return (s = { current: e })
                 },
@@ -6301,7 +6289,7 @@ var consentManager = (function(e) {
                 backgroundColor: e.bannerBackgroundColor
               }),
             n &&
-              Se.createElement(Ii, {
+              Se.createElement(zi, {
                 customCategories: e.customCategories,
                 destinations: e.destinations,
                 preferences: e.preferences,
@@ -6329,7 +6317,7 @@ var consentManager = (function(e) {
                 disableChooseNo: e.disableChooseNo
               }),
             o &&
-              Se.createElement(Li, {
+              Se.createElement(Ii, {
                 innerRef: function(e) {
                   return (u = { current: e })
                 },
@@ -6345,7 +6333,7 @@ var consentManager = (function(e) {
           )
         )
       },
-      Gi = (function() {
+      Yi = (function() {
         var e = function(t, n) {
           return (e =
             Object.setPrototypeOf ||
@@ -6365,8 +6353,8 @@ var consentManager = (function(e) {
             (t.prototype = null === n ? Object.create(n) : ((r.prototype = n.prototype), new r()))
         }
       })(),
-      Wi = { marketingAndAnalytics: null, advertising: null, functional: null },
-      qi = (function(e) {
+      Ki = { marketingAndAnalytics: null, advertising: null, functional: null },
+      Gi = (function(e) {
         function t() {
           var t = (null !== e && e.apply(this, arguments)) || this
           return (
@@ -6375,7 +6363,7 @@ var consentManager = (function(e) {
                 n = e.initialPreferences,
                 r = e.customCategories
               if (n) return n
-              if (!r) return Wi
+              if (!r) return Ki
               var a = {}
               return (
                 Object.keys(r).forEach(function(e) {
@@ -6413,12 +6401,12 @@ var consentManager = (function(e) {
               for (
                 var p = o,
                   d = function(e) {
-                    Bi.find(function(t) {
+                    Fi.find(function(t) {
                       return t === e.category
                     }) &&
                       !1 !== a[e.id] &&
                       (a[e.id] = p.advertising),
-                      Ui.find(function(t) {
+                      Li.find(function(t) {
                         return t === e.category
                       }) &&
                         !1 !== a[e.id] &&
@@ -6438,7 +6426,7 @@ var consentManager = (function(e) {
           )
         }
         return (
-          Gi(t, e),
+          Yi(t, e),
           (t.prototype.render = function() {
             var e = this,
               n = this.props,
@@ -6487,7 +6475,7 @@ var consentManager = (function(e) {
                   C = n.saveConsent,
                   k = n.havePreferencesChanged,
                   x = n.workspaceAddedNewDestinations
-                return Se.createElement(Ki, {
+                return Se.createElement(Hi, {
                   allowAll: _,
                   denyAll: y,
                   disableChooseNo: A,
@@ -6540,8 +6528,8 @@ var consentManager = (function(e) {
           t
         )
       })(ke),
-      Vi = qi
-    function Xi() {
+      Wi = Gi
+    function qi() {
       if ('undefined' != typeof window && (window.navigator || navigator)) {
         var e = navigator,
           t = e.doNotTrack || window.doNotTrack || e.msDoNotTrack
@@ -6551,13 +6539,13 @@ var consentManager = (function(e) {
       return null
     }
     n.d(t, 'version', function() {
-      return Zi
+      return Ji
     }),
       n.d(t, 'openConsentManager', function() {
-        return Yi
+        return Ui
       }),
       n.d(t, 'doNotTrack', function() {
-        return Xi
+        return qi
       }),
       n.d(t, 'inEU', function() {
         return Te.a
@@ -6565,9 +6553,9 @@ var consentManager = (function(e) {
       n.d(t, 'preferences', function() {
         return a
       })
-    var Ji,
-      $i = function() {
-        return ($i =
+    var Vi,
+      Xi = function() {
+        return (Xi =
           Object.assign ||
           function(e) {
             for (var t, n = 1, r = arguments.length; n < r; n++)
@@ -6576,40 +6564,40 @@ var consentManager = (function(e) {
             return e
           }).apply(this, arguments)
       },
-      Zi = '5.0.1',
-      Qi = {},
-      es = window
-    if (!es.consentManagerConfig || 'function' != typeof es.consentManagerConfig)
+      Ji = '5.0.1',
+      $i = {},
+      Zi = window
+    if (!Zi.consentManagerConfig || 'function' != typeof Zi.consentManagerConfig)
       throw new Error('window.consentManagerConfig should be a function')
     if (
-      !(Ji = (Qi = es.consentManagerConfig({
+      !(Vi = ($i = Zi.consentManagerConfig({
         React: Se,
-        version: Zi,
-        openConsentManager: Yi,
-        doNotTrack: Xi,
+        version: Ji,
+        openConsentManager: Ui,
+        doNotTrack: qi,
         inEU: Te.a,
         preferences: a,
         inRegions: Ne.a
       })).container)
     )
       throw new Error('ConsentManager: container is required')
-    if (!Qi.writeKey) throw new Error('ConsentManager: writeKey is required')
-    if (!Qi.bannerContent) throw new Error('ConsentManager: bannerContent is required')
-    if (!Qi.preferencesDialogContent)
+    if (!$i.writeKey) throw new Error('ConsentManager: writeKey is required')
+    if (!$i.bannerContent) throw new Error('ConsentManager: bannerContent is required')
+    if (!$i.preferencesDialogContent)
       throw new Error('ConsentManager: preferencesDialogContent is required')
-    if (!Qi.cancelDialogContent) throw new Error('ConsentManager: cancelDialogContent is required')
+    if (!$i.cancelDialogContent) throw new Error('ConsentManager: cancelDialogContent is required')
     if (
-      ('string' == typeof Qi.implyConsentOnInteraction &&
-        (Qi.implyConsentOnInteraction = 'true' === Qi.implyConsentOnInteraction),
-      void 0 !== Qi.closeBehavior && 'string' == typeof Qi.closeBehavior)
+      ('string' == typeof $i.implyConsentOnInteraction &&
+        ($i.implyConsentOnInteraction = 'true' === $i.implyConsentOnInteraction),
+      void 0 !== $i.closeBehavior && 'string' == typeof $i.closeBehavior)
     ) {
-      var ts = ['accept'.toString(), 'deny'.toString(), 'dismiss'.toString()]
-      if (!ts.includes(Qi.closeBehavior))
-        throw new Error('ConsentManager: closeBehavior should be one of ' + ts)
+      var Qi = ['accept'.toString(), 'deny'.toString(), 'dismiss'.toString()]
+      if (!Qi.includes($i.closeBehavior))
+        throw new Error('ConsentManager: closeBehavior should be one of ' + Qi)
     }
-    var ns = document.querySelector(Ji)
-    if (!ns) throw new Error('ConsentManager: container not found')
-    Se.render(Se.createElement(Vi, $i({}, Qi)), ns)
+    var es = document.querySelector(Vi)
+    if (!es) throw new Error('ConsentManager: container not found')
+    Se.render(Se.createElement(Wi, Xi({}, $i)), es)
   },
   function(e, t, n) {
     'use strict'
