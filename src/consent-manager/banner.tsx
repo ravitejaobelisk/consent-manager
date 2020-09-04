@@ -13,19 +13,19 @@ const Root = styled<{ backgroundColor: string; textColor: string }, 'div'>('div'
   line-height: 1.3;
 `
 
-const Content = styled('div')`
-  a,
-  button {
-    display: inline;
-    padding: 0;
-    border: none;
-    background: none;
-    color: inherit;
-    font: inherit;
-    text-decoration: underline;
-    cursor: pointer;
-  }
-`
+// const Content = styled('div')`
+//   a,
+//   button {
+//     display: inline;
+//     padding: 0;
+//     border: none;
+//     background: none;
+//     color: inherit;
+//     font: inherit;
+//     text-decoration: underline;
+//     cursor: pointer;
+//   }
+// `
 
 const P = styled('p')`
   margin: 0;
@@ -75,14 +75,14 @@ export default class Banner extends PureComponent<Props> {
 
     return (
       <Root innerRef={innerRef} backgroundColor={backgroundColor} textColor={textColor}>
-        <Content>
-          <P>{content}</P>
-          {/* <P>
+        {/* <Content> */}
+        <P>{content}</P>
+        {/* <P>
             <button type="button" onClick={onChangePreferences}>
               {subContent}
             </button>
           </P> */}
-        </Content>
+        {/* </Content> */}
 
         {/* <CloseButton type="button" title="Close" aria-label="Close" onClick={onClose}>
           ✕
