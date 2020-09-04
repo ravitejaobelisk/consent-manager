@@ -98,5 +98,5 @@ export interface ConsentManagerProps {
   allowAll?: boolean
   denyAll?: boolean
   disableChooseNo?: boolean
-  showConsent?: boolean
+  showConsentByChoice?: boolean
 }

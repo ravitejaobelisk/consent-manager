@@ -6,7 +6,6 @@ const Root = styled<{ backgroundColor: string; textColor: string }, 'div'>('div'
   ${fontStyles};
   position: relative;
   padding: 8px;
-  padding-right: 40px;
   background: ${props => props.backgroundColor};
   color: ${props => props.textColor};
   text-align: center;
@@ -35,27 +34,27 @@ const P = styled('p')`
   }
 `
 
-const CloseButton = styled('button')`
-  position: absolute;
-  right: 8px;
-  top: 50%;
-  transform: translateY(-50%);
-  padding: 8px;
-  border: none;
-  background: none;
-  color: inherit;
-  font: inherit;
-  font-size: 14px;
-  line-height: 1;
-  cursor: pointer;
-`
+// const CloseButton = styled('button')`
+//   position: absolute;
+//   right: 8px;
+//   top: 50%;
+//   transform: translateY(-50%);
+//   padding: 8px;
+//   border: none;
+//   background: none;
+//   color: inherit;
+//   font: inherit;
+//   font-size: 14px;
+//   line-height: 1;
+//   cursor: pointer;
+// `
 
 interface Props {
   innerRef: (node: HTMLElement | null) => void
-  onClose: () => void
-  onChangePreferences: () => void
+  // onClose: () => void
+  // onChangePreferences: () => void
   content: React.ReactNode
-  subContent: React.ReactNode
+  // subContent: React.ReactNode
   backgroundColor: string
   textColor: string
 }
@@ -66,10 +65,10 @@ export default class Banner extends PureComponent<Props> {
   render() {
     const {
       innerRef,
-      onClose,
-      onChangePreferences,
+      // onClose,
+      // onChangePreferences,
       content,
-      subContent,
+      // subContent,
       backgroundColor,
       textColor
     } = this.props
@@ -78,16 +77,16 @@ export default class Banner extends PureComponent<Props> {
       <Root innerRef={innerRef} backgroundColor={backgroundColor} textColor={textColor}>
         <Content>
           <P>{content}</P>
-          <P>
+          {/* <P>
             <button type="button" onClick={onChangePreferences}>
               {subContent}
             </button>
-          </P>
+          </P> */}
         </Content>
 
-        <CloseButton type="button" title="Close" aria-label="Close" onClick={onClose}>
+        {/* <CloseButton type="button" title="Close" aria-label="Close" onClick={onClose}>
           ✕
-        </CloseButton>
+        </CloseButton> */}
       </Root>
     )
   }
