@@ -179,7 +179,6 @@ const Container: React.FC<ContainerProps> = props => {
     toggleCancel(false)
     props.resetPreferences()
   }
-  console.log(props.isConsentRequired, props.newDestinations, 'isConsentRequired:')
 
   const showBannerContent =
     showBanner && props.isConsentRequired && props.newDestinations.length > 0

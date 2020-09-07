@@ -6271,7 +6271,6 @@ var consentManager = (function(e) {
               }
             )
           })
-        console.log(e.isConsentRequired, e.newDestinations, 'isConsentRequired:')
         var b = e.isConsentRequired && e.newDestinations.length > 0
         return Se.createElement(
           'div',
