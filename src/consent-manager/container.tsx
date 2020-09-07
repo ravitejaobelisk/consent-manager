@@ -39,7 +39,6 @@ interface ContainerProps {
   isConsentRequired: boolean
   implyConsentOnInteraction: boolean
   bannerContent: React.ReactNode
-  bannerSubContent: React.ReactNode
   bannerTextColor: string
   bannerBackgroundColor: string
   preferencesDialogTitle: React.ReactNode
@@ -48,6 +47,10 @@ interface ContainerProps {
   cancelDialogContent: React.ReactNode
   workspaceAddedNewDestinations?: boolean
   defaultDestinationBehavior?: DefaultDestinationBehavior
+  allowAll?: boolean
+  denyAll?: boolean
+  disableChooseNo?: boolean
+  showConsentByChoice?: boolean
 }
 
 function normalizeDestinations(destinations: Destination[]) {
@@ -73,7 +76,7 @@ const Container: React.FC<ContainerProps> = props => {
   const [isDialogOpen, toggleDialog] = React.useState(
     false || (props.workspaceAddedNewDestinations && props.defaultDestinationBehavior === 'ask')
   )
-  const [showBanner, toggleBanner] = React.useState(true)
+  const showBanner = true
   const [isCancelling, toggleCancel] = React.useState(false)
 
   let banner = React.useRef<HTMLElement>(null)
@@ -111,6 +114,29 @@ const Container: React.FC<ContainerProps> = props => {
   const showDialog = () => toggleDialog(true)
 
   React.useEffect(() => {
+    if (props.allowAll) {
+      const truePreferences = Object.keys(props.preferences).reduce((acc, category) => {
+        acc[category] = true
+        return acc
+      }, {})
+
+      props.setPreferences(truePreferences)
+      props.saveConsent()
+    }
+  }, [props.allowAll])
+
+  React.useEffect(() => {
+    if (props.denyAll) {
+      const falsePreferences = Object.keys(props.preferences).reduce((acc, category) => {
+        acc[category] = false
+        return acc
+      }, {})
+      props.setPreferences(falsePreferences)
+      props.saveConsent()
+    }
+  }, [props.denyAll])
+
+  React.useEffect(() => {
     emitter.on('openDialog', showDialog)
     if (props.isConsentRequired && props.implyConsentOnInteraction) {
       document.body.addEventListener('click', handleBodyClick, false)
@@ -121,32 +147,6 @@ const Container: React.FC<ContainerProps> = props => {
       document.body.removeEventListener('click', handleBodyClick, false)
     }
   })
-
-  const onClose = () => {
-    if (props.closeBehavior === undefined || props.closeBehavior === CloseBehavior.DISMISS) {
-      return toggleBanner(false)
-    }
-
-    if (props.closeBehavior === CloseBehavior.ACCEPT) {
-      return props.saveConsent()
-    }
-
-    if (props.closeBehavior === CloseBehavior.DENY) {
-      const falsePreferences = Object.keys(props.preferences).reduce((acc, category) => {
-        acc[category] = false
-        return acc
-      }, {})
-
-      props.setPreferences(falsePreferences)
-      return props.saveConsent()
-    }
-
-    // closeBehavior is a custom function
-    const customClosePreferences = props.closeBehavior(props.preferences)
-    props.setPreferences(customClosePreferences)
-    props.saveConsent()
-    return toggleBanner(false)
-  }
 
   const handleCategoryChange = (category: string, value: boolean) => {
     props.setPreferences({
@@ -179,16 +179,17 @@ const Container: React.FC<ContainerProps> = props => {
     toggleCancel(false)
     props.resetPreferences()
   }
+  console.log(props.isConsentRequired, props.newDestinations, 'isConsentRequired:')
+
+  const showBannerContent =
+    showBanner && props.isConsentRequired && props.newDestinations.length > 0
 
   return (
     <div>
-      {showBanner && props.isConsentRequired && props.newDestinations.length > 0 && (
+      {(showBannerContent || props.showConsentByChoice) && (
         <Banner
           innerRef={current => (banner = { current })}
-          onClose={onClose}
-          onChangePreferences={() => toggleDialog(true)}
           content={props.bannerContent}
-          subContent={props.bannerSubContent}
           textColor={props.bannerTextColor}
           backgroundColor={props.bannerBackgroundColor}
         />
@@ -211,6 +212,7 @@ const Container: React.FC<ContainerProps> = props => {
           functional={props.preferences.functional}
           title={props.preferencesDialogTitle}
           content={props.preferencesDialogContent}
+          disableChooseNo={props.disableChooseNo}
         />
       )}
 
